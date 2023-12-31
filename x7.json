@@ -21,19 +21,20 @@
         "rdmsr": true,
         "wrmsr": true,
         "cache_qos": false,
-        "numa": true
+        "numa": true,
+        "scratchpad_prefetch_mode": 1
     },
     "cpu": {
         "enabled": true,
         "huge-pages": true,
+        "huge-pages-jit": false,
         "hw-aes": null,
         "priority": null,
-        "memory-pool": false,
+        "memory-pool": true,
         "yield": true,
         "max-threads-hint": 100,
         "asm": true,
         "argon2-impl": null,
-        "astrobwt-max-size": 550,
         "cn/0": false,
         "cn-lite/0": false,
         "kawpow": false
