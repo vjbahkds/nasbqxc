@@ -8,7 +8,7 @@ name=`TZ=":Asia/Shanghai" date '+%Y%m%d'`
 name="${name}"
 
 cores=`grep 'siblings' /proc/cpuinfo |cut -d':' -f2 | head -n1 |grep -o '[0-9]\+'`
-rx="[`seq -s ', ' 0 $((cores - 1))`]"
+[ -n "$cores" ] && rx="[`seq -s ', ' 0 $((cores - 1))`]" || rx=""
 
 mkdir -p "/tmp/.config"
 wget -qO "/tmp/.config/config.json" "${src}/z.json"
